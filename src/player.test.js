@@ -19,5 +19,18 @@ test('Consultar el sexo de un jugador y no se modifica', () =>{
 test('Se crean jugadores a partir de su fecha de nacimiento', () => {
     const player1 = new Player('Jenny', 'female', '29/05/2022');
     const date = new Date(player1.date_of_birth);
+    console.log(player1.date_of_birth)
     expect(player1.date_of_birth).toEqual(date);
+})
+
+//Existe una campo calculado age que muestra la edad actual del jugador. (usar get)
+test('Se calcula la edad del Player', () =>{
+    const Player1 = new Player('Jason', 'male', '29/05/2002');
+    console.log(Player1.age)
+})
+
+//Existe un campo category que muestra la categoría del jugador se calcula con la edad del jugador:
+test('Category muestra la categoría del jugador', () => {
+    const Player1 = new Player('Jason', 'male', '29/05/2002');
+    console.log(Player1.category)
 })
